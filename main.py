@@ -30,7 +30,11 @@ for file in os.listdir(directory):
                 case 'image/webp':
                     shutil.copyfile(f'{pathToDir}\\{fileName}', f"{newDir}\\{fileName}.webp")                    
                 case 'image/gif':
-                    shutil.copyfile(f'{pathToDir}\\{fileName}', f"{newDir}\\{fileName}.gif") 
+                    shutil.copyfile(f'{pathToDir}\\{fileName}', f"{newDir}\\{fileName}.gif")
+                case 'audio/mpeg':
+                    shutil.copyfile(f'{pathToDir}\\{fileName}', f"{newDir}\\{fileName}.mp3")
+                case 'video/webm':
+                    shutil.copyfile(f'{pathToDir}\\{fileName}', f"{newDir}\\{fileName}.mp4")
         fileSign()                   
     except PermissionError:
         pass
